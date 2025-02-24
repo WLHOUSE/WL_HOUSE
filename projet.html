@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WL-HOUSE | Robes de Mariée et Soirée</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Page d'accueil -->
+    <section class="hero">x
+        <div class="overlay"></div>
+        <div class="text-container">
+            <h1 class="animated-text">Bienvenue chez WL-HOUSE,</h1>
+            <p class="animated-text">Découvrez notre sélection exclusive de robes de soirée et de mariages qui vous sublimeront lors de vos événements les plus importants .</p>
+        </div>
+    </section>
+
+    <!-- Menu de navigation -->
+    <nav>
+        <ul>
+            <li><a href="projet.html">Home</a></li>
+            <li><a href="p.html">Robes de mariée</a></li>
+            <li><a href="PAGE3.html"> Robes de soirée</a></li>
+            <li><a href="PAGE5.html">À propos</a></li>
+            <li><a href="PAGE4.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section des Robes -->
+    <section id="robes">
+        <h2>Notre Nouvelle Collections</h2>
+        <div class="robes-gallery">
+            <div class="robe-item">
+                <img src="robe3.png" alt="Robe Mariée">
+                <p>Robe Mariée Élégante</p>
+            </div>
+            <div class="robe-item">
+                <img src="b.png" alt="Robe de Soirée">
+                <p>Robe de Soirée Glamour</p>
+            </div>
+            <div class="robe-item">
+                <img src="we.png" alt="Robe de Mariée">
+                <p>Robe de Mariée Classique</p>
+            </div>
+            <div class="robe-item">
+                <img src="v.jpg" alt="Robe de Mariée">
+                <p>Robe Noir chic et Élégante</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <script>
+        // Animation du texte (écriture dynamique)
+document.addEventListener('DOMContentLoaded', () => {
+    const textElements = document.querySelectorAll('.animated-text');
+
+    textElements.forEach((element, index) => {
+        element.style.animationDelay = `${index * 0.5}s`; // Espacer les animations
+    });
+});
+
+    </script>
+</body>
+</html>
