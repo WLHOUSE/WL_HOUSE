@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robes de Mariée Élégantes</title>
+    <!-- Intégration des polices Google -->
+    
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5; /* Fond blanc légèrement gris */
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.8); /* Blanc pur pour un look lumineux */
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: #333; /* Or doux */
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Section Introduction avec texte animé */
+        .intro {
+            text-align: center;
+            padding: 100px 20px; /* Plus d'espace au-dessus */
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+            animation: fadeInUp 1.5s ease-out;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro p {
+            
+            font-family: URW Chancery L, cursive, serif;
+            font-size: 28px;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fadeInText 2s ease-out forwards;
+            transition: opacity 1s ease-out;
+        }
+
+        /* Container des robes */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding: 40px;
+        }
+
+        .robe {
+            background-color: #fff;
+            height: 35%;
+            width: 35%; /* Chaque robe occupe 48% de l'écran pour deux robes par ligne */
+            margin: 10px 0; /* Espacement entre les éléments */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+
+        .robe img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            object-fit: cover; /* L'image s'ajuste mieux à la taille du conteneur */
+        }
+
+        .robe h2 {
+            font-size: 24px;
+            color: #c39c6b; /* Or doux */
+            margin-top: 15px;
+            transition: color 0.3s ease;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .robe p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .prix {
+            font-size: 18px;
+            color: #e74c3c; /* Rouge pour attirer l'attention sur le prix */
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #c39c6b; /* Or doux */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #836348; /* Or plus chaud lors du survol */
+            transform: scale(1.05); /* Effet de zoom lors du survol */
+        }
+
+        /* Animation des images des robes */
+        .robe:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Effet sur le hover du nom de la robe */
+        .robe:hover h2 {
+            color: #e74c3c;
+        }
+
+        /* Animation d'apparition des robes */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation d'apparition du header */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Animation d'apparition du texte de l'intro */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive: pour les petits écrans, une seule robe par ligne */
+        @media (max-width: 768px) {
+            .robe {
+                width: 100%; /* Chaque robe occupe toute la largeur de l'écran */
+                margin-bottom: 20px; /* Un peu plus d'espace entre les robes */
+            }
+
+            header h1 {
+                font-size: 30px; /* Ajustement de la taille du texte pour mobile */
+            }
+
+            .btn {
+                font-size: 14px; /* Ajustement de la taille du bouton pour mobile */
+            }
+
+            .intro p {
+                font-size: 16px; /* Ajustement du texte pour mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> Notre Robes de Mariée </h1>
+</header>
+
+<!-- Section Introduction avec texte animé -->
+<div class="intro">
+    <p>Découvrez notre collection de robes de mariée, alliant élégance, confort et raffinement. Que vous préfériez une coupe classique, bohème ou princesse, chaque robe est conçue pour sublimer votre silhouette et rendre votre jour J inoubliable.</p>
+</div>
+
+<div class="container">
+    <!-- Robe 1 -->
+    <div class="robe">
+        <img src="A.jPG" alt="Robe Élégante">
+        <h2>Robe Élégance</h2>
+        <p>Une robe de mariée romantique avec des détails en dentelle et une coupe fluide parfaite pour les grandes occasions.</p>
+        <p class="prix">Prix : 1 500€</p>
+        <a href="#" class="btn">Voir Détails</a>
+    </div>
+
+    <!-- Robe 2 -->
+    <div class="robe">
+        <img src="we.png" alt="Robe Classique">
+        <h2>Robe Classique</h2>
+        <p>Une robe intemporelle, élégante et simple, avec une coupe fluide et un décolleté en V subtil.</p>
+        <p class="prix">Prix : 1 800€</p>
+        <a href="#" class="btn">Voir Détails</a>
+    </div>
+
+    <!-- Robe 3 -->
+    <div class="robe">
+        <img src="B.jPG" alt="Robe Princesse">
+        <h2>Robe Princesse</h2>
+        <p>Une robe spectaculaire avec une longue traîne et des détails brillants pour un look féérique.</p>
+        <p class="prix">Prix : 2 200€</p>
+        <a href="#" class="btn">Voir Détails</a>
+    </div>
+
+    <!-- Robe 4 -->
+    <div class="robe">
+        <img src="C.jPG" alt="Robe Bohème">
+        <h2>Robe Bohème</h2>
+        <p>Une robe légère et bohème, avec des manches longues en dentelle et une silhouette fluide pour un mariage champêtre.</p>
+        <p class="prix">Prix : 1 200€</p>
+        <a href="#" class="btn">Voir Détails</a>
+    </div>
+
+    <div class="robe">
+        <img src="D.jpg" alt="Robe Bohème">
+        <h2>Robe Bohème</h2>
+        <p>Une robe siréne élegant, avec des manches longues et des estrasses.</p>
+        <p class="prix">Prix : 900€</p>
+        <a href="#" class="btn">Voir Détails</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Boutique de Robes de Mariée. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

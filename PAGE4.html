@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* Formulaire de Contact */
+#formulaire-contact {
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 50px auto;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease; /* Transition douce sur tout le formulaire */
+}
+
+#formulaire-contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Transition sur la couleur du titre */
+}
+
+#formulaire-contact p {
+    font-size: 18px;
+    color: #6d6d6d;
+    margin-bottom: 30px;
+}
+
+/* Formulaire - Champs et boutons */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease; /* Transition sur la couleur du label */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition sur la bordure et l'ombre */
+}
+
+input:focus, textarea:focus {
+    border-color: #7e5e4a;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(126, 94, 74, 0.3); /* Ajout d'une ombre douce lors du focus */
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Bouton Envoyer */
+button {
+    padding: 15px;
+    background-color: #7e5e4a; /* Couleur marron doux */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition douce sur la couleur et la taille */
+}
+
+button:hover {
+    background-color: #4d3325; /* Gris foncé au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille du bouton */
+}
+
+button:active {
+    background-color:#c39c6b ; /* Gris plus foncé quand on clique */
+    transform: scale(1); /* Retour à la taille normale après le clic */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    #formulaire-contact {
+        width: 90%;
+        padding: 30px;
+    }
+
+    #formulaire-contact h2 {
+        font-size: 28px;
+    }
+
+    #formulaire-contact p {
+        font-size: 16px;
+    }
+
+    input, textarea, button {
+        font-size: 14px;
+    }
+}
+
+</style>
+<body>
+    <section id="formulaire-contact">
+        <h2>Contactez-Nous</h2>
+        <p>Nous serons heureux de répondre à toutes vos questions. Complétez le formulaire ci-dessous pour nous envoyer un message.</p>
+        
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required placeholder="Votre nom complet">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required placeholder="Votre adresse e-mail">
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required placeholder="Votre message ici..."></textarea>
+            </div>
+    
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+    
+</body>
+</html>

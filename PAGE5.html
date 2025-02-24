@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   /* Réinitialisation basique des marges et des bordures */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Police générale et typographie pour le texte */
+body {
+  font-family: 'Lora', serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Pour empêcher le défilement horizontal */
+}
+
+/* En-tête (Header) */
+header {
+  background-color: #5d4e3e;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+/* Section "À propos" */
+#about {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: 'Lora', serif;
+}
+
+#about h2 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  color: #5d4e3e;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+#about p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #555;
+  letter-spacing: 0.5px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container des cartes des designers */
+.designer-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Carte d'un designer */
+.designer-card {
+  width: 240px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Effet au survol de la carte */
+.designer-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image des designers avec hauteur réduite */
+.designer-img {
+  width: 100%;
+  height: 150px; /* Hauteur réduite des photos */
+  object-fit: cover; /* Ajuste l'image pour couvrir la zone sans déformation */
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* Effet d'opacité au survol */
+.designer-card:hover .designer-img {
+  opacity: 0.8;
+}
+
+/* Nom du designer */
+.designer-name {
+  margin-top: 15px;
+  font-size: 1.5em;
+  color: #5d4e3e;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+/* Diplôme du designer */
+.designer-degree {
+  font-size: 1.1em;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Effet de survol sur le texte */
+.designer-card:hover .designer-name,
+.designer-card:hover .designer-degree {
+  color: #333;
+}
+
+/* Cartes avec fond gris au survol */
+.designer-card:hover {
+  background-color: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  background-color: #5d4e3e;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+/* Navigation principale */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f4f4f4;
+}
+
+/* Sections supplémentaires */
+section {
+  padding: 40px 20px;
+}
+
+/* Styles pour les boutons (si vous en avez) */
+button {
+  background-color: #5d4e3e;
+  color: white;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7a6451;
+}
+
+/* Media Queries pour les écrans petits */
+@media (max-width: 768px) {
+  .designer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  #about h2 {
+    font-size: 2.5em;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  #about h2 {
+    font-size: 2em;
+  }
+
+  .designer-card {
+    width: 200px;
+  }
+}
+
+
+</style>
+<body>
+    <head>
+        <!-- Lien vers Google Fonts pour la typographie -->
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400&display=swap" rel="stylesheet">
+      </head>
+      
+      <section id="about">
+        <h2>À propos de nous</h2>
+        <p>Bienvenue chez <strong>WL-HOUSE</strong>, un espace dédié à la création de robes de mariée et de soirée élégantes. Depuis 2000, nous nous efforçons de concevoir des robes qui subliment chaque moment spécial de votre vie, en alliant tradition et innovation.</p>
+        
+        <p>Notre équipe de designers talentueux, diplômés des plus grandes écoles de mode, crée des robes uniques, parfaitement adaptées à vos goûts et à votre silhouette. Chaque robe est réalisée sur mesure, avec des tissus de haute qualité et une attention particulière aux détails.</p>
+        
+        <p>Nos designers :</p>
+        <div class="designer-container">
+          <div class="designer-card">
+            <img src="car.jpg" alt="Designer 1" class="designer-img">
+            <h3 class="designer-name">Carolina herrera</h3>
+            <p class="designer-degree">Diplôme: Master en Design de Mode</p>
+          </div>
+          <div class="designer-card">
+            <img src="elie.jPG" alt="Designer 2" class="designer-img">
+            <h3 class="designer-name">Elie saab</h3>
+            <p class="designer-degree">Diplôme: Bachelor en Création de Mode</p>
+          </div>
+          <div class="designer-card">
+            <img src="Valentino.jPG" alt="Designer 3" class="designer-img">
+            <h3 class="designer-name">Valentino Garavani</h3>
+            <p class="designer-degree">Diplôme: Licence en Stylisme</p>
+          </div>
+        </div>
+        
+        <p>Nous nous engageons à offrir une expérience client exceptionnelle, avec des robes personnalisées selon vos envies et un service de qualité pour vous accompagner dans chaque étape de la création.</p>
+        
+        <p>Choisissez <strong>WL-HOUSE</strong> pour une robe unique, créée pour rendre votre journée inoubliable.</p>
+      </section>
+      
+</body>
+</html>
